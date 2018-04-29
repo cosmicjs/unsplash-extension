@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
 import axios from 'axios'
 import Cosmic from 'cosmicjs'
 import S from 'shorti'
@@ -9,7 +7,7 @@ import { Input, Button, Icon, Loader } from 'semantic-ui-react'
 import fileDownload from 'js-file-download'
 
 const UNSPLASH_SEARCH_URL = 'https://api.unsplash.com/search/photos'
-const ACCESS_KEY = 'fd2c5776f4acd4cd209ea51fec419d09591404ef9e357ef6a5eed195023bcd53'
+const UNSPLASH_ACCESS_KEY = 'fd2c5776f4acd4cd209ea51fec419d09591404ef9e357ef6a5eed195023bcd53'
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -34,8 +32,11 @@ class App extends Component {
       data: {}
     }
   }
+  componentDidMount() {
+    document.getElementById('search-input').focus()
+  }
   getPhotos(q) {
-    axios.get(UNSPLASH_SEARCH_URL + '?client_id=' + ACCESS_KEY + '&query=' + q + '&per_page=50')
+    axios.get(UNSPLASH_SEARCH_URL + '?client_id=' + UNSPLASH_ACCESS_KEY + '&query=' + q + '&per_page=50')
     .then(res => {
       const photos = res.data.results
       this.setState({
@@ -104,12 +105,16 @@ class App extends Component {
       <div className="App">
         <div style={ S('w-100p') }>
           <div style={ S('pull-left m-15 w-500') }>
-            <Input icon='search' placeholder="Search free high-resolution photos" style={ S('w-100p') } onKeyUp={ this.handleKeyUp.bind(this) }/>
+            <Input id="search-input" icon='search' placeholder="Search free high-resolution photos" style={ S('w-100p') } onKeyUp={ this.handleKeyUp.bind(this) }/>
           </div>
           <div style={ S('pull-right m-20') }>
-            <img src="https://cosmicjs.com/images/logo.svg" style={ S('w-30 pull-left mr-10') }/>
+            <a href="https://cosmicjs.com" target="_blank">
+              <img src="https://cosmicjs.com/images/logo.svg" style={ S('w-30 pull-left mr-10') }/>
+            </a>
             <Icon style={ S('mt-25n mr-10 w-40') } name="heart" color="red" size="large" />
-            <svg className="_2m4hn" version="1.1" viewBox="0 0 32 32" width="32" height="32" aria-labelledby="unsplash-home" aria-hidden="false" data-reactid="47"><title id="unsplash-home" data-reactid="48">Unsplash Home</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z" data-reactid="49"></path></svg>
+            <a href="https://unsplash.com" target="_blank">
+              <svg className="_2m4hn" version="1.1" viewBox="0 0 32 32" width="32" height="32" aria-labelledby="unsplash-home" aria-hidden="false" data-reactid="47"><title id="unsplash-home" data-reactid="48">Unsplash Home</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z" data-reactid="49"></path></svg>
+            </a>
           </div>
         </div>
         <div style={ S('clearfix') }/>
@@ -141,7 +146,7 @@ class App extends Component {
             !photos &&
             <div style={ S('font-20 text-center m-60') }>
               <div style={ S('mb-30') }>
-                Use the search bar above to find images from <a href="https://unsplash.com" target="_blank">Unsplash</a>
+                Use the search bar above to find photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>
               </div>
               <svg className="_2m4hn" version="1.1" viewBox="0 0 32 32" width="32" height="32" aria-labelledby="unsplash-home" aria-hidden="false" data-reactid="47"><title id="unsplash-home" data-reactid="48">Unsplash Home</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z" data-reactid="49"></path></svg>
             </div>

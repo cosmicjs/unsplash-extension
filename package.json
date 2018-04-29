@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "cosmicjs": "^3.1.6",
+    "cosmicjs": "^3.1.8",
     "js-file-download": "^0.4.1",
     "lodash": "^4.17.10",
     "querystring-es3": "^0.2.1",
