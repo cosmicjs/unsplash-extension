@@ -33,11 +33,8 @@ class App extends Component {
     this.state = {
       data: {}
     }
-    this.getPhotos()
   }
   getPhotos(q) {
-    if (!q)
-      q = 'dog'
     axios.get(UNSPLASH_SEARCH_URL + '?client_id=' + ACCESS_KEY + '&query=' + q + '&per_page=50')
     .then(res => {
       const photos = res.data.results
@@ -49,6 +46,12 @@ class App extends Component {
     })
   }
   handleKeyUp(e) {
+    if (!e.target.value) {
+      this.setState({
+        data: {}
+      })
+      return
+    }
     this.getPhotos(e.target.value)
   }
   handleAddToMedia(photo) {
@@ -101,9 +104,9 @@ class App extends Component {
       <div className="App">
         <div style={ S('w-100p') }>
           <div style={ S('pull-left m-15 w-500') }>
-            <Input icon='search' placeholder="Search by keywords" style={ S('w-100p') } onKeyUp={ this.handleKeyUp.bind(this) }/>
+            <Input icon='search' placeholder="Search free high-resolution photos" style={ S('w-100p') } onKeyUp={ this.handleKeyUp.bind(this) }/>
           </div>
-          <div style={ S('pull-right m-10') }>
+          <div style={ S('pull-right m-20') }>
             <img src="https://cosmicjs.com/images/logo.svg" style={ S('w-30 pull-left mr-10') }/>
             <Icon style={ S('mt-25n mr-10 w-40') } name="heart" color="red" size="large" />
             <svg className="_2m4hn" version="1.1" viewBox="0 0 32 32" width="32" height="32" aria-labelledby="unsplash-home" aria-hidden="false" data-reactid="47"><title id="unsplash-home" data-reactid="48">Unsplash Home</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z" data-reactid="49"></path></svg>
@@ -117,9 +120,12 @@ class App extends Component {
               {
                 photos.map(photo => {
                   return (
-                    <div key={photo.id} style={S('pull-left ml-15 mb-15 w-320 relative')}>
-                      <div style={ S('bg-url(' + photo.urls.regular + ') bg-center bg-cover w-320 h-320')} />
-                      <div style={ S('absolute b-8 text-center w-100p') }>
+                    <div key={photo.id} style={S('pull-left ml-15 mb-15 w-300 relative')}>
+                      <div style={ S('relative z-1 bg-url(' + photo.urls.regular + ') bg-center bg-cover w-300 h-320')} />
+                      <div style={ S('text-center z-0 absolute t-80 w-100p') }>
+                        <Loader active inline size="large" />
+                      </div>
+                      <div style={ S('absolute z-2 b-8 text-center w-100p') }>
                         {
                           this.getButton(photo)
                         }
@@ -133,8 +139,11 @@ class App extends Component {
           }
           {
             !photos &&
-            <div>
-              Loading...
+            <div style={ S('font-20 text-center m-60') }>
+              <div style={ S('mb-30') }>
+                Use the search bar above to find images from <a href="https://unsplash.com" target="_blank">Unsplash</a>
+              </div>
+              <svg className="_2m4hn" version="1.1" viewBox="0 0 32 32" width="32" height="32" aria-labelledby="unsplash-home" aria-hidden="false" data-reactid="47"><title id="unsplash-home" data-reactid="48">Unsplash Home</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z" data-reactid="49"></path></svg>
             </div>
           }
         </div>
