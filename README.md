@@ -5,6 +5,8 @@
 
 Install this Cosmic JS Extension to easily add Unsplash photos to your Cosmic JS Bucket.
 
+![Unsplash Photos](https://cosmic-s3.imgix.net/43ec39a0-4e13-11e8-8691-75009aec3fb7-unsplash-extension.gif)
+
 ## Installation
 1. Login to your [Cosmic JS Account](https://cosmicjs.com/login)
 2. Go to Your Bucket > Settings > Extensions > Unsplash Photos, click install
