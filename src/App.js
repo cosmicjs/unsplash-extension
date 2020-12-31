@@ -4,7 +4,6 @@ import Cosmic from 'cosmicjs'
 import S from 'shorti'
 import _ from 'lodash'
 import { Input, Button, Icon, Loader } from 'semantic-ui-react'
-import fileDownload from 'js-file-download'
 
 const UNSPLASH_SEARCH_URL = 'https://api.unsplash.com/search/photos'
 const UNSPLASH_ACCESS_KEY = 'fd2c5776f4acd4cd209ea51fec419d09591404ef9e357ef6a5eed195023bcd53'
@@ -93,10 +92,10 @@ class App extends Component {
   }
   getButton(photo) {
     if (this.state.data.adding_media && this.state.data.adding_media.indexOf(photo.id) !== -1)
-      return <Button default><Loader active inline size="mini"/>&nbsp;&nbsp;Adding...</Button>
+      return <div style={S('mb-10 text-center')}><Button default><Loader active inline size="mini"/>&nbsp;&nbsp;Adding...</Button></div>
     if (this.state.data.added_media && this.state.data.added_media.indexOf(photo.id) !== -1)
-      return <Button default><Icon name="check" color="green"/>&nbsp;&nbsp;Added</Button>
-    return <Button default onClick={ this.handleAddToMedia.bind(this, photo) } style={ S('mr-10') }><Icon name="plus" />&nbsp;&nbsp;Add to Media</Button>
+      return <div style={S('mb-10 text-center')}><Button default><Icon name="check" color="green"/>&nbsp;&nbsp;Added</Button></div>
+    return <div style={S('mb-10 text-center')}><Button default onClick={ this.handleAddToMedia.bind(this, photo) }><Icon name="plus" />&nbsp;&nbsp;Add to Media</Button></div>
   }
   render() {
     const photos = this.state.data.photos
@@ -125,8 +124,8 @@ class App extends Component {
               {
                 photos.map(photo => {
                   return (
-                    <div key={photo.id} style={S('pull-left ml-15 mb-15 w-300 relative')}>
-                      <div style={ S('relative z-1 bg-url(' + photo.urls.regular + ') bg-center bg-cover w-300 h-320')} />
+                    <div key={photo.id} style={S('pull-left ml-15 mb-15 w-31p relative')}>
+                      <div style={ S('relative z-1 bg-url(' + photo.urls.regular + ') bg-center bg-cover w-100p h-320')} />
                       <div style={ S('text-center z-0 absolute t-80 w-100p') }>
                         <Loader active inline size="large" />
                       </div>
