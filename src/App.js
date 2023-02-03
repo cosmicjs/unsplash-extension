@@ -17,9 +17,7 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-const api = Cosmic({
-  version: 'v3',
-})
+const api = Cosmic()
 const bucket = api.bucket({
   slug: getParameterByName('bucket_slug'),
   read_key: getParameterByName('read_key'),
