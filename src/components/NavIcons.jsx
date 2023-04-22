@@ -11,8 +11,6 @@ function NavIcons() {
       <a href='https://unsplash.com' target='_blank'>
         <svg
           className='h-6 w-6 fill-black dark:fill-white hover:fill-gray-800 hover:dark:fill-gray-200'
-          width='32'
-          height='32'
           aria-labelledby='unsplash-home'
           aria-hidden='false'
           viewBox='0 0 32 32'

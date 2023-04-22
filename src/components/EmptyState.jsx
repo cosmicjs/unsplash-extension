@@ -14,7 +14,7 @@ function EmptyState() {
         >
           <path d='M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z' />
         </svg>
-        <div className='text-2xl font-sans text-neutral-800 dark:text-neutral-200'>
+        <div className='text-center text-2xl font-sans text-neutral-800 dark:text-neutral-200'>
           Use the search bar above to find photos from{' '}
           <a href='https://unsplash.com' target='_blank'>
             Unsplash
