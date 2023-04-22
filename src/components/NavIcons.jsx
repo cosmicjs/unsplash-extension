@@ -3,7 +3,7 @@ import { HeartIcon } from '@heroicons/react/20/solid'
 
 function NavIcons() {
   return (
-    <div className='flex w-max items-center space-x-4 mr-2 lg:mr-0'>
+    <div className='flex w-1/3 lg:w-max items-center space-x-4 mr-2 lg:mr-0'>
       <a href='https://cosmicjs.com' target='_blank' className="shrink-0">
         <img src='https://cosmicjs.com/images/logo.svg' className='w-6 h-6' />
       </a>
