@@ -1,3 +1,5 @@
+import React from 'react'
+
 function EmptyState() {
   return (
     <div className='grid w-full h-screen place-content-center'>
