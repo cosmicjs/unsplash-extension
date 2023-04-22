@@ -2,7 +2,7 @@ import React from 'react'
 
 function EmptyState() {
   return (
-    <div className='grid w-full h-screen place-content-center'>
+    <div className='grid w-full h-[95vh] place-content-center'>
       <div className='flex flex-col items-center justify-center space-y-4'>
         <svg
           className='h-8 w-8 fill-black dark:fill-white'
