@@ -132,7 +132,7 @@ class App extends Component {
     const photos = this.state.data.photos
     return (
       <div className='bg-white dark:bg-[#111] min-h-screen w-full'>
-        <div className='flex w-full items-center justify-between p-6 space-x-4'>
+        <div className='flex w-full items-center justify-between space-x-4'>
           <Input onKeyUp={this.handleKeyUp.bind(this)} />
           <NavIcons />
         </div>
