@@ -132,13 +132,13 @@ class App extends Component {
     const photos = this.state.data.photos
     return (
       <div className='bg-white dark:bg-[#111] min-h-screen w-full'>
-        <div className='flex w-full items-center justify-between space-x-4'>
+        <div className='flex w-full items-center justify-between space-x-4 lg:p-4'>
           <Input onKeyUp={this.handleKeyUp.bind(this)} />
           <NavIcons />
         </div>
         <div>
           {photos && (
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 w-full gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:p-4 w-full gap-2 lg:gap-6'>
               {photos.map((photo) => {
                 return (
                   <div key={photo.id} className='w-full relative'>
