@@ -4,11 +4,11 @@ import { HeartIcon } from '@heroicons/react/20/solid'
 function NavIcons() {
   return (
     <div className='flex w-max items-center space-x-4'>
-      <a href='https://cosmicjs.com' target='_blank'>
+      <a href='https://cosmicjs.com' target='_blank' className="shrink-0">
         <img src='https://cosmicjs.com/images/logo.svg' className='w-6 h-6' />
       </a>
-      <HeartIcon width={20} height={20} className='fill-red-500' />
-      <a href='https://unsplash.com' target='_blank'>
+      <HeartIcon width={20} height={20} className='fill-red-500 shrink-0' />
+      <a href='https://unsplash.com' target='_blank' className="shrink-0">
         <svg
           className='h-6 w-6 fill-black dark:fill-white hover:fill-gray-800 hover:dark:fill-gray-200'
           aria-labelledby='unsplash-home'
