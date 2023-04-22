@@ -138,7 +138,7 @@ class App extends Component {
         </div>
         <div>
           {photos && (
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:p-4 w-full gap-2 lg:gap-6'>
+            <div className='mt-2 lg:mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:p-4 w-full gap-2 lg:gap-6'>
               {photos.map((photo) => {
                 return (
                   <div key={photo.id} className='w-full relative'>
