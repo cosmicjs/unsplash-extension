@@ -9,7 +9,7 @@
 }
 
 html, body {
-  @apply p-6
+  @apply p-2
 }
 
 a {
