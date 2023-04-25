@@ -8,6 +8,11 @@
   font-family: 'Inter', sans-serif;
 }
 
+html,
+body {
+  @apply bg-white dark:bg-[#111];
+}
+
 a {
   @apply !text-current hover:!text-current;
 }

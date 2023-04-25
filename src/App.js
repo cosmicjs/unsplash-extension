@@ -133,7 +133,7 @@ class App extends Component {
   render() {
     const photos = this.state.data.photos
     return (
-      <main className='bg-white dark:bg-[#111] h-screen w-full p-2'>
+      <main className='h-full w-full p-2'>
         <Header>
           <Input onKeyUp={this.handleKeyUp.bind(this)} />
           <NavIcons />
