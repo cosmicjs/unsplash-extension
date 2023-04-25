@@ -6,7 +6,8 @@
 
 Install this Cosmic Extension to easily add Unsplash photos to your Cosmic Bucket.
 
-![Unsplash Photos](https://cosmic-s3.imgix.net/43ec39a0-4e13-11e8-8691-75009aec3fb7-unsplash-extension.gif)
+![Unsplash Photos](https://imgix.cosmicjs.com/f0adc600-e381-11ed-b167-57053eec4e6e-Unsplash.png)
+![Unsplash Photos image grid and image added](https://imgix.cosmicjs.com/f0be40c0-e381-11ed-b167-57053eec4e6e-Unsplash-2.png)
 
 ## Installation
 
