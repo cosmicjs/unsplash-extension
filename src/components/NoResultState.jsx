@@ -1,6 +1,6 @@
 import React from 'react'
 
-function EmptyState() {
+function NoResultState() {
   return (
     <div className='grid w-full h-[95vh] place-content-center'>
       <div className='flex flex-col items-center justify-center space-y-4'>
@@ -15,16 +15,11 @@ function EmptyState() {
           <path d='M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z' />
         </svg>
         <div className='text-center text-2xl font-sans text-neutral-800 dark:text-neutral-200'>
-          Use the search bar above to find photos from{' '}
-          <a href='https://unsplash.com' target='_blank'>
-            <span className='underline decoration-[#2AAAE2] text-[#2AAAE2] underline-offset-4 thickness-4'>
-              Unsplash
-            </span>
-          </a>
+          No results for your search. Try again!
         </div>
       </div>
     </div>
   )
 }
 
-export default EmptyState
+export default NoResultState

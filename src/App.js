@@ -5,7 +5,9 @@ import Button from './components/Button'
 import NavIcons from './components/NavIcons'
 import Input from './components/Input'
 import Photo from './components/Photo'
+import Header from './components/Header'
 import EmptyState from './components/EmptyState'
+import NoResultState from './components/NoResultState'
 import _ from 'lodash'
 import { PlusIcon, CheckIcon } from '@heroicons/react/20/solid'
 import '../src/styles/globals.css'
@@ -131,11 +133,11 @@ class App extends Component {
   render() {
     const photos = this.state.data.photos
     return (
-      <div className='bg-white dark:bg-[#111] min-h-screen w-full'>
-        <div className='flex w-full items-center justify-between space-x-4 lg:p-4'>
+      <main className='bg-white dark:bg-[#111] h-screen w-full p-2'>
+        <Header>
           <Input onKeyUp={this.handleKeyUp.bind(this)} />
           <NavIcons />
-        </div>
+        </Header>
         <div>
           {photos && (
             <div className='mt-4 lg:mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:p-4 w-full gap-4 lg:gap-6'>
@@ -151,8 +153,9 @@ class App extends Component {
             </div>
           )}
           {!photos && <EmptyState />}
+          {photos && photos.length <= 0 && <NoResultState />}
         </div>
-      </div>
+      </main>
     )
   }
 }

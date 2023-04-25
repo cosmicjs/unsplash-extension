@@ -8,10 +8,6 @@
   font-family: 'Inter', sans-serif;
 }
 
-html, body {
-  @apply p-2
-}
-
 a {
   @apply !text-current hover:!text-current;
 }

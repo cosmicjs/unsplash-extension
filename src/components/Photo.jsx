@@ -17,7 +17,7 @@ function Photo({ url, children, id }) {
         <a
           href={'https://unsplash.com/photos/' + id}
           target='_blank'
-          className='flex items-center justify-center bg-gray-50 border-gray-300 rounded-md py-2 px-4 w-max hover:bg-gray-100 group-hover:text-gray-700 dark:group-hover:text-gray-400 group-hover:shadow-md group'
+          className='flex items-center justify-center bg-gray-50 border border-gray-300 rounded-md py-2 px-4 w-max hover:bg-gray-200 group-hover:text-gray-700 dark:group-hover:text-gray-400 group-hover:shadow-md group'
         >
           <span className='mr-2'>Unsplash</span>
           <ArrowUpRightIcon
