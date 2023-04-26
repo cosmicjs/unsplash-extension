@@ -19,4 +19,4 @@ Cosmic dashboard version: `2.0`
 Uses the [Cosmic SDK](https://www.npmjs.com/package/@cosmicjs/sdk).
 
 ### Legacy dashboard
-Go to `dashboard-v1` branch for the old dashboard extension.
+Go to [dashboard-v1](https://github.com/cosmicjs/unsplash-extension/tree/dashboard-v1) branch for the old dashboard extension.
