@@ -7,9 +7,9 @@ Install this extension to search and add [Unsplash](https://unsplash.com) photos
 
 ### Steps to install
 
-1. Log in to the [Cosmic dashboard](https://cosmicjs.com/login)
+1. Log in to the [Cosmic dashboard](https://www.cosmicjs.com/login)
 2. Go to Project > Bucket > Extensions > Unsplash Photos, click install.
-3. Go to the new "Photos" section in your Bucket side navigation.
+3. Go to the new "Unsplash Photos" section in your Bucket > Extensions area.
 4. Search and add Unsplash photos to your Bucket in one click!
 
 
