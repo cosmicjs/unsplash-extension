@@ -15,6 +15,7 @@ Install this extension to search and add [Unsplash](https://unsplash.com) photos
 
 ## Compatibility
 Cosmic dashboard version: `2.0`
+
 Uses the [Cosmic SDK](https://www.npmjs.com/package/@cosmicjs/sdk).
 
 ### Legacy dashboard
