@@ -1,4 +1,4 @@
-# Unsplash Photos Extension
+# Unsplash Photos Extension (Cosmic Dashboard v2 / Cosmic SDK)
 
 ![Unsplash](https://imgix.cosmicjs.com/fa2c8250-376c-11ed-b702-97f073df2e1a-unsplash.png?w=700)
 
