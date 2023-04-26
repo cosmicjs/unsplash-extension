@@ -12,7 +12,7 @@ function Photo({ url, children, id }) {
       <div className='text-center z-0 absolute top-64 w-full'>
         <Loader active inline size='large' />
       </div>
-      <div className='absolute z-20 text-center w-full bottom-8  items-center justify-center flex space-x-4'>
+      <div className='absolute z-20 text-center w-full bottom-4 items-center justify-center flex space-x-4'>
         {children}
         <a
           href={'https://unsplash.com/photos/' + id}
