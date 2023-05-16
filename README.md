@@ -1,7 +1,7 @@
 # Unsplash Photos Extension
 Search and add [Unsplash](https://unsplash.com) photos to your Cosmic Bucket.
 
-![Unsplash Photos](https://imgix.cosmicjs.com/62b11940-e455-11ed-ae1d-5deea67677ad-unsplash-screenshot.png?w=2000&auto=format&mask=corners&corner-radius=60,60,60,60)
+![Unsplash Photos](https://imgix.cosmicjs.com/62b11940-e455-11ed-ae1d-5deea67677ad-unsplash-screenshot.png?w=2000&auto=format&mask=corners&corner-radius=104,104,104,104)
 ## Installation
 [Go to this extension](https://www.cosmicjs.com/marketplace/extensions/unsplash-photos) and click "Install Extension" to easily add Unsplash photos to your Cosmic Bucket.
 
