@@ -1,14 +1,22 @@
 # Unsplash Photos Extension
-![Unsplash](https://cosmic-s3.imgix.net/50a66f60-4bc7-11e8-804d-376227a7e98f-sy7VugkQBo0.jpg?w=700)
+Search and add [Unsplash](https://unsplash.com) photos to your Cosmic Bucket.
 
-### [View the Extension](https://cosmicjs.com/extensions/unsplash-photos)
-
-Install this Cosmic JS Extension to easily add Unsplash photos to your Cosmic JS Bucket.
-
-![Unsplash Photos](https://cosmic-s3.imgix.net/43ec39a0-4e13-11e8-8691-75009aec3fb7-unsplash-extension.gif)
-
+![Unsplash Photos](https://imgix.cosmicjs.com/62b11940-e455-11ed-ae1d-5deea67677ad-unsplash-screenshot.png?w=2000&auto=format&mask=corners&corner-radius=104,104,104,104)
 ## Installation
-1. Login to your [Cosmic JS Account](https://cosmicjs.com/login)
-2. Go to Your Bucket > Settings > Extensions > Unsplash Photos, click install
-3. Go to the new "Photos" section in your Bucket side navigation
+[Go to this extension](https://www.cosmicjs.com/marketplace/extensions/unsplash-photos) and click "Install Extension" to easily add Unsplash photos to your Cosmic Bucket.
+
+### Steps to install
+
+1. Log in to the [Cosmic dashboard](https://www.cosmicjs.com/login)
+2. Go to Project > Bucket > Extensions > Unsplash Photos, click install.
+3. Go to the new "Unsplash Photos" section in your Bucket > Extensions area.
 4. Search and add Unsplash photos to your Bucket in one click!
+
+
+## Compatibility
+Cosmic dashboard version: `2.0`
+
+Uses the [Cosmic JavaScript SDK](https://www.npmjs.com/package/@cosmicjs/sdk).
+
+### Legacy dashboard
+Go to [dashboard-v1](https://github.com/cosmicjs/unsplash-extension/tree/dashboard-v1) branch for the old dashboard extension.

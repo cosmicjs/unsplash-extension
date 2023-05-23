@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  @apply bg-white dark:bg-[#111];
+}
+
+a {
+  @apply !text-current hover:!text-current;
+}
